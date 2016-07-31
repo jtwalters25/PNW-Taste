@@ -1,3 +1,4 @@
+/*=======================LAYOUT SECTION===============*/
 body {
   background-color: black;
   width: 960px;
@@ -6,12 +7,187 @@ body {
   font-family: georgia;
   }
 
+  #container {
+    overflow: auto;
+    height: 100%;
+  }
+
+  .box1, .box2, .box3 {
+    background-color: darkred;
+    font-style: normal;color: white;
+    text-align: center;
+    width: 254px;
+    float: left;
+    margin: 10px;
+    padding:20px;
+    border-style: solid;
+    border-color: red;
+    }
+
+  .box1{
+    background-image: url("../imgs/clams.png");
+    background-size: cover;
+  }
+
+  .box2{
+    background-image: url("../imgs/shrimp-big.jpg");
+    background-size: cover;
+  }
+
+  .box3{
+      background-image: url("../imgs/crab-big.jpg");
+      background-size: cover;
+  }
+
+  .feature{
+    height: 600px;
+    width: auto;
+    padding-top: 10px;
+    background-image: url("../imgs/sable-fish-big.jpg");
+    background-size: cover;
+    text-align: center; color: white;
+  }
+  #nav, #footer{
+    background-color: transparent;;
+    display: inline-block;
+    list-style-type: none;
+    font-size: 24px; color: white;
+    font-weight: bold;
+    text-align: center;
+    height: auto;
+    width: 960px;
+  }
+
+  #featured{
+    font-size: 2px; color: yellow;
+    font:
+    font-weight: bold;
+    text-align: center;
+    background-color: black;
+    border-style: solid;
+    border-color: red;
+  }
+
+  #nav_wrapper {
+      width: 960px;
+      margin: 0 auto;
+      text-align: center;
+  }
+
+  #nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    min-width: 200px;
+  }
+  #nav ul li {
+    display: inline-block;
+  }
+
+  #nav ul li:hover {
+    background-color: black;
+  }
+
+
+  #nav ul li a, visited {
+    color: white;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+
+  }
+
+  #nav ul li:hover ul{
+    display: block;
+  }
+
+  #nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: red;
+    border: 2px solid #222;
+    border-top: 0;
+    margin-left: -5px;
+  }
+
+  #nav ul ul li {
+    display: block;
+  }
+
+  #nav ul li a:hover{
+    color: grey;
+  }
+
+  #footer ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    min-width: 200px;
+
+  }
+
+  #footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    min-width: 200px;
+  }
+  #footer ul li {
+    display: inline-block;
+  }
+  #footer ul li:hover {
+    background-color: black;
+  }
+
+  #footer ul li a, visited {
+    color: white;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+
+  }
+
+  #footer ul li:hover ul{
+    display: block;
+  }
+
+  #footer ul ul {
+    display: none;
+    position: absolute;
+    background-color: red;
+    border: 2px solid #222;
+    border-top: 0;
+    margin-left: -5px;
+  }
+
+  #footer ul li a{
+    list-style-type: none;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+  }
+
+  #nav ul li a:hover {
+    color: grey;
+  }
+
+  .contactform {
+    text-align:center;
+    width: auto;
+    height: auto;
+    border-style: solid;
+  }
+  /*======================HEADINGS SECTION================*/
+
 h1 {
   height: 300px;
   width: auto;
   font-size: 72px; color: white;
   text-align: center;
-  background-image: url("/imgs/clams-big.jpg");
+  background-image: url("../imgs/clams-big.jpg");
   background-size: cover;
   padding: 20px;
   text-shadow: 2px 2px red;
@@ -33,175 +209,6 @@ h3{
 p{
   font-size: 22px; color: white;
   font-weight: normal; color: white;
-}
-#container {
-  overflow: auto;
-  height: 100%;
-}
-
-.box1, .box2, .box3 {
-  background-color: darkred;
-  font-style: normal;color: white;
-  text-align: center;
-  width: 254px;
-  float: left;
-  margin: 10px;
-  padding:20px;
-  border-style: solid;
-  border-color: red;
-  }
-
-.box1{
-  background-image: url("../imgs/clams.png");
-  background-size: cover;
-}
-
-.box2{
-  background-image: url("../imgs/shrimp-big.jpg");
-  background-size: cover;
-}
-
-.box3{
-    background-image: url("../imgs/crab-big.jpg");
-    background-size: cover;
-}
-
-.feature{
-  height: 600px;
-  width: auto;
-  padding-top: 10px;
-  background-image: url("../imgs/sable-fish-big.jpg");
-  background-size: cover;
-  text-align: center; color: white;
-}
-#nav, #footer{
-  background-color: transparent;;
-  display: inline-block;
-  list-style-type: none;
-  font-size: 24px; color: white;
-  font-weight: bold;
-  text-align: center;
-  height: auto;
-  width: 960px;
-}
-
-#featured{
-  font-size: 2px; color: yellow;
-  font:
-  font-weight: bold;
-  text-align: center;
-  background-color: black;
-  border-style: solid;
-  border-color: red;
-}
-
-#nav_wrapper {
-    width: 960px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#nav ul {
-  list-style-type: none;
-  padding: 0;
   margin: 0;
-  position: relative;
-  min-width: 200px;
-}
-#nav ul li {
-  display: inline-block;
-}
-
-#nav ul li:hover {
-  background-color: black;
-}
-
-
-#nav ul li a, visited {
-  color: white;
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-
-}
-
-#nav ul li:hover ul{
-  display: block;
-}
-
-#nav ul ul {
-  display: none;
-  position: absolute;
-  background-color: red;
-  border: 2px solid #222;
-  border-top: 0;
-  margin-left: -5px;
-}
-
-#nav ul ul li {
-  display: block;
-}
-
-#nav ul li a:hover{
-  color: grey;
-}
-
-#footer ul li {
-  list-style-type: none;
   padding: 0;
-  margin: 0;
-  position: relative;
-  min-width: 200px;
-
-}
-
-#footer ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  min-width: 200px;
-}
-#footer ul li {
-  display: inline-block;
-}
-
-#footer ul li:hover {
-  background-color: black;
-}
-
-#footer ul li a, visited {
-  color: white;
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-
-}
-
-#footer ul li:hover ul{
-  display: block;
-}
-
-#footer ul ul {
-  display: none;
-  position: absolute;
-  background-color: red;
-  border: 2px solid #222;
-  border-top: 0;
-  margin-left: -5px;
-}
-
-#footer ul li a{
-  list-style-type: none;
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-}
-
-#nav ul li a:hover {
-  color: grey;
-}
-
-.contactform {
-  text-align:left;
 }
