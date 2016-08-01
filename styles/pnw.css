@@ -11,6 +11,7 @@ body {
     overflow: auto;
     height: 100%;
   }
+<<<<<<< HEAD
 
   .box1, .box2, .box3 {
     background-color: darkred;
@@ -96,6 +97,93 @@ body {
     padding: 15px;
     text-decoration: none;
 
+=======
+
+  .box1, .box2, .box3 {
+    background-color: darkred;
+    font-style: normal;color: white;
+    text-align: center;
+    width: 254px;
+    float: left;
+    margin: 10px;
+    padding:20px;
+    border-style: solid;
+    border-color: red;
+    }
+
+  .box1{
+    background-image: url("../imgs/clams.png");
+    background-size: cover;
+  }
+
+  .box2{
+    background-image: url("../imgs/shrimp-big.jpg");
+    background-size: cover;
+  }
+
+  .box3{
+      background-image: url("../imgs/crab-big.jpg");
+      background-size: cover;
+  }
+
+  .feature{
+    height: 600px;
+    width: auto;
+    padding-top: 10px;
+    background-image: url("../imgs/sable-fish-big.jpg");
+    background-size: cover;
+    text-align: center; color: white;
+  }
+  #nav, #footer{
+    background-color: transparent;;
+    display: inline-block;
+    list-style-type: none;
+    font-size: 24px; color: white;
+    font-weight: bold;
+    text-align: center;
+    height: auto;
+    width: 960px;
+  }
+
+  #featured{
+    font-size: 2px; color: yellow;
+    font:
+    font-weight: bold;
+    text-align: center;
+    background-color: black;
+    border-style: solid;
+    border-color: red;
+  }
+
+  #nav_wrapper {
+      width: 960px;
+      margin: 0 auto;
+      text-align: center;
+  }
+
+  #nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    min-width: 200px;
+  }
+  #nav ul li {
+    display: inline-block;
+  }
+
+  #nav ul li:hover {
+    background-color: black;
+  }
+
+
+  #nav ul li a, visited {
+    color: white;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+
+>>>>>>> gh-pages
   }
 
   #nav ul li:hover ul{
@@ -174,6 +262,15 @@ body {
     color: grey;
   }
 
+<<<<<<< HEAD
+=======
+  .contactform {
+    text-align:center;
+    width: auto;
+    height: auto;
+    border-style: solid;
+  }
+>>>>>>> gh-pages
   /*======================HEADINGS SECTION================*/
 
 h1 {
