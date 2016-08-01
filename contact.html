@@ -51,15 +51,15 @@
   </div>
   <!-- contact form starts here -->
   <div id="featured"> <h2>Contact Us!</h2></div>
-  <form>
+  <form action="action_page.php">
     <fieldset>
       <div>
         <label for="myName"><p>Name</p></label>
-        <input type="text" name="myName" id="myName">
+        <input type="text" name="myName" id="myName" method="post">
       </div>
       <div>
         <label for="email"><p>Email</p></label>
-        <input type="text" name="email" id="email">
+        <input type="text" name="email" id="email" method="post">
       </div>
       <div>
         <input type="submit" value="   Send Now   ">
@@ -102,15 +102,15 @@
           Comments:
         </label>
         <br />
-        <textarea name="comments" rows="8" cols="40">
+        <textarea name="comments" id="commentbox" rows="8" cols="40">
         </textarea>
       </p>
       <label>
-        <input type="checkbox" name="subscribe" checked="checked" />
+    <input type="checkbox" name="subscribe" checked="checked" />
         <p>Sign me up for email updates</p>
       </label>
       <br />
-      <input type="submit" value="Submit feedback" />
+      <input type="submit" value="   Submit feedback   " />
     </fieldset>
   </form>
 </div>
@@ -121,6 +121,6 @@
     <li><a href="index.html">Home</a></li>
   </ul>
 </div>
-<script src="pnw.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
