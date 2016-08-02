@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 /*=============LAYOUT SECTION=============*/
-=======
-/*=========LAYOUT SECTION==========*/
->>>>>>> gh-pages
 body {
   background-color: black;
   width: 960px;
@@ -30,7 +26,6 @@ body {
   .box1{
     background-image: url("../imgs/clams.png");
     background-size: cover;
-<<<<<<< HEAD
 
   }
 
@@ -40,17 +35,10 @@ body {
   }
 
   .box1 h3 {
-=======
-
-  }
-
-  .box1 a {
->>>>>>> gh-pages
     text-decoration: none;
     color: white;
   }
 
-<<<<<<< HEAD
   .box2{
     background-image: url("../imgs/shrimp-big.jpg");
     background-size: cover;
@@ -62,24 +50,10 @@ body {
   }
 
   .box2 h3 {
-=======
-  .box1 h3 {
     text-decoration: none;
     color: white;
   }
 
-  .box2{
-    background-image: url("../imgs/shrimp-big.jpg");
-    background-size: cover;
-  }
-
-  .box2 a {
->>>>>>> gh-pages
-    text-decoration: none;
-    color: white;
-  }
-
-<<<<<<< HEAD
   .box3{
       background-image: url("../imgs/crab-big.jpg");
       background-size: cover;
@@ -91,40 +65,6 @@ body {
   }
 
   .box3 h3 {
-=======
-  .box2 h3 {
-    text-decoration: none;
-    color: white;
-  }
-
-  .box3{
-      background-image: url("../imgs/crab-big.jpg");
-      background-size: cover;
-  }
-
-  .box3 a {
->>>>>>> gh-pages
-    text-decoration: none;
-    color: white;
-  }
-
-<<<<<<< HEAD
-  .feature{
-    height: 600px;
-    width: auto;
-    padding-top: 10px;
-    background-image: url("../imgs/sable-fish-big.jpg");
-    background-size: cover;
-    text-align: center; color: white;
-  }
-
-  .happyhour{
-    height: 600px;
-    width: auto;
-    padding-top: 10px;
-    background-image: url("../imgs/tuna-big.jpg");
-=======
-  .box3 h3 {
     text-decoration: none;
     color: white;
   }
@@ -134,27 +74,10 @@ body {
     width: auto;
     padding-top: 10px;
     background-image: url("../imgs/sable-fish-big.jpg");
->>>>>>> gh-pages
     background-size: cover;
     text-align: center; color: white;
   }
 
-<<<<<<< HEAD
-  .lunchdish{
-=======
-  .lunch{
->>>>>>> gh-pages
-    height: 600px;
-    width: auto;
-    padding-top: 10px;
-    background-image: url("../imgs/seafoodsalad.jpg");
-    background-size: cover;
-    text-align: center; color: white;
-<<<<<<< HEAD
-=======
-    border-style: solid;
-    border-color: red;
-  }
   .happyhour{
     height: 600px;
     width: auto;
@@ -162,9 +85,15 @@ body {
     background-image: url("../imgs/ahituna.jpg");
     background-size: cover;
     text-align: center; color: white;
-    border-style: solid;
-    border-color: red;
->>>>>>> gh-pages
+  }
+
+  .lunchdish{
+    height: 600px;
+    width: auto;
+    padding-top: 10px;
+    background-image: url("../imgs/seafoodsalad.jpg");
+    background-size: cover;
+    text-align: center; color: white;
   }
   #nav, #footer{
     background-color: transparent;;
@@ -173,13 +102,8 @@ body {
     font-size: 24px; color: white;
     font-weight: bold;
     text-align: center;
-<<<<<<< HEAD
     border-style: solid;
     border-color: grey;
-=======
-    padding: 0;
-    margin: 0;
->>>>>>> gh-pages
     height: auto;
     width: 960px;
   }
@@ -295,20 +219,11 @@ body {
     text-decoration: none;
     color: white;
   }
-<<<<<<< HEAD
 
   #nav ul li a:hover {
     color: grey;
   }
 /*======================HEADINGS SECTION================*/
-=======
-
-  #nav ul li a:hover {
-    color: grey;
-  }
-
-/*===============HEADINGS SECTION============*/
->>>>>>> gh-pages
 h1 {
   height: 300px;
   width: auto;
@@ -317,19 +232,11 @@ h1 {
   background-image: url("../imgs/clams-big.jpg");
   background-size: cover;
   padding: 20px;
-<<<<<<< HEAD
-=======
-  margin: 0;
->>>>>>> gh-pages
   text-shadow: 2px 2px red;
 }
 
 h2 {
-<<<<<<< HEAD
-  font-size: 36px; 
-=======
   font-size: 36px;
->>>>>>> gh-pages
   text-align: center;
   text-shadow: 2px 2px black;
 }
@@ -343,10 +250,7 @@ h3{
 
 p{
   font-weight: normal; color: white;
-<<<<<<< HEAD
   font-size: 34px;
   text-shadow: 2px 2px red;
   text-align: center;
-=======
->>>>>>> gh-pages
 }
