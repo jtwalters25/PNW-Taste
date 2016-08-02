@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>contact form</title>
-  <link rel="stylesheet" href="styles/pnw.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="styles/pnw.css" media="screen" title="PNW Taste" charset="utf-8">
 
   <style type="text/css">
   fieldset{
@@ -51,25 +51,19 @@
   </div>
   <!-- contact form starts here -->
   <div id="featured"> <h2>Contact Us!</h2></div>
-  <form action="action_page.php">
-    <fieldset>
-      <div>
-        <label for="myName"><p>Name</p></label>
-        <input type="text" name="myName" id="myName" method="post">
-      </div>
-      <div>
-        <label for="email"><p>Email</p></label>
-        <input type="text" name="email" id="email" method="post">
-      </div>
-      <div>
-        <input type="submit" value="   Send Now   ">
-      </div>
-    </fieldset>
-    <br />
+    <form action="action_page.php" method="post" target="_blank" accept-charset="UTF-8">
     <fieldset>
       <legend>
         <h3>Feedback:</h3>
       </legend>
+      <p>
+        <label for="myName"><p>Name</p></label>
+        <input type="text" name="myName" id="myName" method="post">
+      </p>
+      <p>
+        <label for="email"><p>Email</p></label>
+        <input type="text" name="email" id="email" method="post">
+      </p>
       <p>
         <label for="discovery">
           How did you discovery this awesome restaurant?
@@ -110,7 +104,7 @@
         <p>Sign me up for email updates</p>
       </label>
       <br />
-      <input type="submit" value="   Submit feedback   " />
+      <input type="submit" id="myBtn" value="   Submit feedback   " onClick="javascript: storeInput();"  />
     </fieldset>
   </form>
 </div>
@@ -121,6 +115,13 @@
     <li><a href="index.html">Home</a></li>
   </ul>
 </div>
-<script src="main.js"></script>
+
+  <script>
+
+  document.getElementById("myBtn").addEventListener("click", function(){
+    alert("Thank You For Your Feedback!!!");
+  });
+  </script>
+<!-- <script src="main.js"></script> -->
 </body>
 </html>
