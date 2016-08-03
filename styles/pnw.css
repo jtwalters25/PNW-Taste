@@ -6,7 +6,6 @@ body {
   font-variant: small-caps;
   font-family: georgia;
   }
-
   #container {
     overflow: auto;
     height: 100%;
@@ -205,4 +204,11 @@ p{
   font-weight: normal; color: white;
   margin: 0;
   padding: 0;
+}
+
+#discovery, #myBtn{
+    font-size: 18px; color: black;
+    font-weight: normal; color: black;
+    margin: 0;
+    padding: 0;
 }
