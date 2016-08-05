@@ -5,6 +5,20 @@
   <title>Happy Hour</title>
   <meta name="Description" content="Pacific Northwest Taste">
   <link rel="stylesheet" href="styles/main.css" title="happyhour" charset="utf-8">
+
+  <style type="text/css">
+
+  h3{
+    text-align: center;
+    font-style: normal;color: white;
+    font-size: 40px;
+  }
+  button{
+    background-color: red;
+    margin: 20px;
+  }
+
+  </style>
 </head>
 <body>
   <div id="header">
@@ -15,6 +29,7 @@
   <div id="nav_wrapper">
     <ul>
       <li><a href="index.html">Home</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
       <li><a href="#">Menu</a>
         <!-- dropdown menu -->
         <ul>
@@ -35,9 +50,31 @@
   <h3>Enjoy delicious $6 Happy hour everyday from 3pm-6pm</h3>
   </div>
 </div>
+
+<button onclick="myFunction()"> <h3>FIND OUT TODAY'S HAPPY HOUR DRINK SPECIAL</h3> </button>
+
+ <h3 id="drinkSpecial"></h3>
+<script>
+function myFunction() {
+    var d = new Date();
+    var weekday = new Array(7);
+    weekday[0] = "Today is Cosmo Sunday";
+    weekday[1] = "Today is Moscow Mule Monday";
+    weekday[2] = "Today is Martini Tuesday ";
+    weekday[3] = "Today is Manhattan Wednesday";
+    weekday[4] = "Today is Mojito Thursday";
+    weekday[5] = "Today is Margherita Friday";
+    weekday[6] = "Today is Old Fashion Saturday";
+
+    var n = weekday[d.getDay()];
+    document.getElementById("drinkSpecial").innerHTML = n;
+}
+
+</script>
 <div id="footer">
   <ul>
     <li><a href="index.html">Home</a></li>
+    <li><a href="reservations.html">Reservations</a></li>
     <!-- link to email form page here!!! -->
     <li><a href="contact.html">Contact</a></li>
   </ul>
