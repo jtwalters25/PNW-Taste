@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="styles/pnw.css" media="screen" title="PNW Taste" charset="utf-8">
 
   <style type="text/css">
-  fieldset{
+  fieldset, h3{
     width:auto;
     text-align: left;
     padding: 20px;
@@ -20,17 +20,27 @@
 
   }
 
-  #contactform{
+  h3{
+    text-decoration-line: underline;
+    font-size: 26px; color: white;
+    font-weight: normal; color: yellow;
+    text-align: left;
+    margin: auto;
+    padding: inherit;
+  }
+
+  #contactform {
     background-color: black;
     width: 80%;
   }
 
   #discovery, #myBtn{
-      font-size: 17px; color: black;
-      font-weight: normal; color: black;
-      margin: 0;
-      padding: 0;
+    font-size: 17px; color: black;
+    font-weight: normal; color: black;
+    margin: 0;
+    padding: 0;
   }
+
   </style>
 
 </head>
@@ -40,6 +50,7 @@
     <div id="nav_wrapper">
       <ul>
         <li><a href="index.html">Home</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
         <li><a href="#">Menu</a>
           <!-- dropdown menu -->
           <ul>
@@ -57,76 +68,60 @@
   </div>
   <!-- contact form starts here -->
   <div id="featured"> <h2>Contact Us</h2></div>
-    <form action="action_page.php" method="post" target="_blank" accept-charset="UTF-8">
-    <fieldset>
-      <legend>
-        <h3>Feedback:</h3>
-      </legend>
-      <p>
-        <label for="myName"><p>Name</p></label>
-        <input type="text" name="myName" id="myName" method="post">
-      </p>
-      <p>
-        <label for="email"><p>Email</p></label>
-        <input type="text" name="email" id="email" method="post">
-      </p>
-      <p>
-        <label for="discovery">
-          How did you discovery this awesome restaurant?
-        </label>
-        <select name="referrer" id="discovery">
-          <option value="facebook">Facebook</option>
-          <option value="friend">Friend</option>
-          <option value="ads">Advertisement</option>
-          <option value="other">Other</option>
-        </select>
-      </p>
-      <p>
-        Would you come back?
-        <br />
-        <label>
-          <input type="radio" name="rating" value="yes" />
-          Yes
-        </label>
-        <label>
-          <input type="radio" name="rating" value="No" />
-          No
-        </label>
-        <label>
-          <input type="radio" name="rating" value="maybe" />
-          Maybe
-        </label>
-      </p>
-      <p>
-        <label for="comments">
-          Comments:
-        </label>
-        <br />
-        <textarea name="comments" id="commentbox" rows="8" cols="40">
-        </textarea>
-      </p>
-      <label>
-        <input type="checkbox" name="subscribe" checked="checked" />
-        <p>Sign me up for email updates</p>
-      </label>
-      <br />
-      <input type="submit" id="myBtn" value="   Submit feedback   " onClick="javascript: storeInput();"  />
-    </fieldset>
+  <form action="action_page.php" method="post" target="_blank" accept-charset="UTF-8">
+    <div class="contact">
+      <form id="contact" action="apply.php">
+        <label for="email"><h3>Email</h3></label>
+        <input type="text" id="email" name="email" value="" /><br>
+        <label for="myname"><h3>Name</h3></label>
+        <input type="text" id="myname" name="myname" value="" /><br>
+        <label for="comments"><h3>Comments</h3></label>
+        <textarea id="comments" name="comments"></textarea>
+        <input type="submit"  />
+      </form>
+    </div>
+    <script>
+    if (window.localStorage) {
+      var txtEmail = document.getElementById('email');//get form elements
+      var txtMyname = document.getElementById('myname');
+      var txtComments = document.getElementById('comments');
+      txtEmail.value = localStorage.getItem('email');
+      txtMyname.value = localStorage.getItem('myname');
+      txtComments.value = localStorage.getItem('comments');
+
+      txtEmail.addEventListener('input', function() { //data saved
+        localStorage.setItem('email', txtEmail.value);
+      }, false);
+
+      txtMyname.addEventListener('input', function() {
+        localStorage.setItem('myname', txtMyname.value);
+      }, false);
+
+      txtComments.addEventListener('input', function() {
+        localStorage.setItem('comments', txtComments.value);
+      }, false);
+        
+    }
+    </script>
+    <br />
   </form>
+
+</form>
 </div>
 <div id="footer">
   <ul>
     <!-- link to email form page here -->
     <li><a href="#">Contact</a></li>
+    <li><a href="reservations.html">Reservations</a></li>
     <li><a href="index.html">Home</a></li>
   </ul>
 </div>
-  <script>
+<script>
+// document.getElementById("submit").addEventListener("click", function(){
+// alert("Thank You For Your Feedback!!");
+// });
+</script>
 
-  document.getElementById("myBtn").addEventListener("click", function(){
-    alert("Thank You For Your Feedback!!!");
-  });
-  </script>
-<!-- <script src="main.js"></script> -->
+<script src="main.js"></script>
 </body>
 </html>

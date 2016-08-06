@@ -1,53 +1,138 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>contact form</title>
-    <link rel="stylesheet" href="styles/pnw.css" media="screen" title="no title" charset="utf-8">
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>reservation form</title>
+  <link rel="stylesheet" href="styles/pnw.css" media="screen" title="no title" charset="utf-8">
+
+  <style type="text/css">
+  fieldset{
+    width:auto;
+    text-align: left;
+    padding: 20px;
+    margin: 5px;
+  }
+  button{
+    background-color: red;
+    margin: 20px;
+  }
+
+  input, textarea,{
+    font-style: italic;
+    font-size: 22px;
+    margin: 0;
+    padding:0;
+  }
+
+  form{
+    font-size: 22px; color: white;
+    font-weight: normal; color: white;
+    margin: 0;
+    padding: 0;
+
+  }
+  h3{
+    text-decoration-line: underline;
+    font-size: 26px; color: white;
+    font-weight: normal; color: yellow;
+    text-align: left;
+    margin: auto;
+    padding: inherit;
+
+  }
+  #contactform{
+    background-color: black;
+    width: 80%;
+  }
+
+  #discovery, #myBtn, #reserver{
+    font-size: 17px; color: black;
+    font-weight: normal; color: black;
+    margin: 0;
+    padding: 0;
+  }
+  </style>
+</head>
+<body>
   <h1>Pacific NorthWest Taste</h1>
-    <div id="nav">
+  <div id="nav">
     <div id="nav_wrapper">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="#">Menu</a>
+          <!-- dropdown menu -->
+          <ul>
+            <li><a href="lunchmenu.html">Lunch</a>
+            </li>
+            <li><a href="happyhour.html">Happy Hour</a>
+            </li>
+            <li><a href="#">Dinner</a>
+            </li>
+          </li>
+        </ul>
+      </ul>
+    </div>
+    <!-- nav wrapper end -->
+  </div>
+  <!-- contact form starts here -->
+  <div id="featured"> <h2>Reservations</h2></div>
+  <form action="action_page.php" method="post" target="_blank" accept-charset="UTF-8">
+    <div class="reservations">
+      <form id="reservations" action="apply.php">
+        <label for="firstname"><h3>First Name:</h3></label>
+        <input type="text" id="firstname" name="firstname" value="" /><br>
+        <label for="lastname"><h3>Last Name:</h3></label>
+        <input type="text" id="lastname" name="lastname" value="" /><br>
+        <label for="reserveemail"><h3>E mail:</h3></label>
+        <input type="text" id="reserveemail" name="reserveemail" value="" /><br>
+      </form>
+    </div>
+    <script>
+    if (window.localStorage) {
+    var txtFirstname = document.getElementById('firstname');
+      var txtLastname = document.getElementById('lastname');
+      var txtReserveemail = document.getElementById('reserveemail');
+    txtFirstname.value = localStorage.getItem('firstname');
+      txtLastname.value = localStorage.getItem('lastname');
+      txtReserveemail.value = localStorage.getItem('reserveemail');
+    txtFirstname.addEventListener('input', function() {
+        localStorage.setItem('firstname', txtFirstname.value);
+      }, false);
+
+      txtLastname.addEventListener('input', function() {
+        localStorage.setItem('lastname', txtLastname.value);
+      }, false);
+
+      txtReserveemail.addEventListener('input', function() {
+        localStorage.setItem('reserveemail', txtReserveemail.value);
+      }, false);
+    }
+    </script>
+
+    <br />
+    <input type="submit" id="reserver" value="   RESERVE   "/>
+    <script>
+    document.getElementById("reserver").addEventListener("click", function(){
+      alert("Thank You! We Look Forward To Seeing You!!");
+    });
+    </script>
+
+  </form>
+</form>
+</div>
+</fieldset>
+</div>
+<div id="footer">
   <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="reservations.html">Reservations</a></li>
-    <li><a href="#">Menu</a>
-      <!-- dropdown menu -->
-      <ul>
-        <li><a href="lunchmenu.html">Lunch</a>
-        </li>
-        <li><a href="happyhour.html">Happy Hour</a>
-        </li>
-        <li><a href="#">Dinner</a>
-        </li>
-        </li>
-      </ul>
+    <!-- link to email form page here -->
+    <li><a href="contact.html">Contact</a></li>
+    <!-- link to resevation form page here -->
+    <li><a href="#">Reservations</a></li>
   </ul>
-  </div>
-  <!-- nav wrapper end -->
 </div>
-<!-- contact form starts here -->
-<div id="featured"> <h2>Contact Us!</h2></div>
-  <div class="reservationform">
-  <form class="reservationform" action="index.html" method="post">
-    <p>First Name:</p><input type="text" name="firstname" value=""><br>
-    <p>Last Name:</p><input type="text" name="lastname" value="1,2,3">
-    <p>E mail:</p><input type="text" name="email" value="">
-    <p>Special Notes:</p>
-    </form>
-    <textarea name="commentbox" rows="20" cols="40"></textarea>
-</div>
-  <div id="footer">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <!-- link to email form page here -->
-      <li><a href="contact.html">Contact</a></li>
-      <!-- link to resevation form page here -->
-      <li><a href="#">Reservations</a></li>
-      <li><a href="index.html">Home</a></li>
-    </ul>
-  </div>
-    <script src="pnw.js"></script>
+
+<script src="main.js"></script>
 </body>
 </html>
