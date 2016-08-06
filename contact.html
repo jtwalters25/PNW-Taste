@@ -35,10 +35,10 @@
   }
 
   #discovery, #myBtn{
-      font-size: 17px; color: black;
-      font-weight: normal; color: black;
-      margin: 0;
-      padding: 0;
+    font-size: 17px; color: black;
+    font-weight: normal; color: black;
+    margin: 0;
+    padding: 0;
   }
 
   </style>
@@ -68,6 +68,7 @@
   </div>
   <!-- contact form starts here -->
   <div id="featured"> <h2>Contact Us</h2></div>
+<<<<<<< HEAD
     <form action="action_page.php" method="post" target="_blank" accept-charset="UTF-8">
       <div class="contact">
         <form id="contact" action="apply.php">
@@ -109,7 +110,47 @@
 
 </form>
 
+=======
+  <form action="action_page.php" method="post" target="_blank" accept-charset="UTF-8">
+    <div class="contact">
+      <form id="contact" action="apply.php">
+        <label for="email"><h3>Email</h3></label>
+        <input type="text" id="email" name="email" value="" /><br>
+        <label for="myname"><h3>Name</h3></label>
+        <input type="text" id="myname" name="myname" value="" /><br>
+        <label for="comments"><h3>Comments</h3></label>
+        <textarea id="comments" name="comments"></textarea>
+        <input type="submit"  />
+      </form>
+    </div>
+    <script>
+    if (window.localStorage) {
+      var txtEmail = document.getElementById('email');//get form elements
+      var txtMyname = document.getElementById('myname');
+      var txtComments = document.getElementById('comments');
+      txtEmail.value = localStorage.getItem('email');
+      txtMyname.value = localStorage.getItem('myname');
+      txtComments.value = localStorage.getItem('comments');
+
+      txtEmail.addEventListener('input', function() { //data saved
+        localStorage.setItem('email', txtEmail.value);
+      }, false);
+
+      txtMyname.addEventListener('input', function() {
+        localStorage.setItem('myname', txtMyname.value);
+      }, false);
+
+      txtComments.addEventListener('input', function() {
+        localStorage.setItem('comments', txtComments.value);
+      }, false);
+        
+    }
+    </script>
+    <br />
+>>>>>>> gh-pages
   </form>
+
+</form>
 </div>
 <div id="footer">
   <ul>
@@ -119,11 +160,19 @@
     <li><a href="index.html">Home</a></li>
   </ul>
 </div>
+<<<<<<< HEAD
   <script>
   // document.getElementById("submit").addEventListener("click", function(){
     // alert("Thank You For Your Feedback!!");
   // });
   </script>
+=======
+<script>
+// document.getElementById("submit").addEventListener("click", function(){
+// alert("Thank You For Your Feedback!!");
+// });
+</script>
+>>>>>>> gh-pages
 
 <script src="main.js"></script>
 </body>
