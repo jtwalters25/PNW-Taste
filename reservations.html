@@ -77,39 +77,62 @@
   </div>
   <!-- contact form starts here -->
   <div id="featured"> <h2>Reservations</h2></div>
-  <div class="formOne">
-    <form id="contactInfo" action="apply.php">
-      <label for="firstName"><h3>First Name:</h3></label>
-      <input type="text" id="firstName" name="firstname" /><br>
-      <label for="lastName"><h3>Last Name:</h3></label>
-      <input type="text" id="lastName" name="lastname" /><br>
-      <label for="reserveEmail"><h3>E mail:</h3></label>
-      <input type="text" id="reserveEmail" name="email" /><br>
-      <input type="submit"/>
-    </form>
-  </div>
-  <script src="main.js"></script>
-            <input type="submit" id="reserver" value="   RESERVE   "/>
-            <script>
-            document.getElementById("reserver").addEventListener("click", function(){
-              alert("Thank You! We Look Forward To Seeing You!!");
-            });
-            </script>
+  <form action="action_page.php" method="post" target="_blank" accept-charset="UTF-8">
+    <div class="reservations">
+      <form id="reservations" action="apply.php">
+        <label for="firstname"><h3>First Name:</h3></label>
+        <input type="text" id="firstname" name="firstname" value="" /><br>
+        <label for="lastname"><h3>Last Name:</h3></label>
+        <input type="text" id="lastname" name="lastname" value="" /><br>
+        <label for="reserveemail"><h3>E mail:</h3></label>
+        <input type="text" id="reserveemail" name="reserveemail" value="" /><br>
+      </form>
+    </div>
+    <script>
+    if (window.localStorage) {
+    var txtFirstname = document.getElementById('firstname');
+      var txtLastname = document.getElementById('lastname');
+      var txtReserveemail = document.getElementById('reserveemail');
+    txtFirstname.value = localStorage.getItem('firstname');
+      txtLastname.value = localStorage.getItem('lastname');
+      txtReserveemail.value = localStorage.getItem('reserveemail');
+    txtFirstname.addEventListener('input', function() {
+        localStorage.setItem('firstname', txtFirstname.value);
+      }, false);
 
-          </form>
-        </form>
-      </div>
-    </fieldset>
-  </div>
-  <div id="footer">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <!-- link to email form page here -->
-      <li><a href="contact.html">Contact</a></li>
-      <!-- link to resevation form page here -->
-      <li><a href="#">Reservations</a></li>
-    </ul>
-  </div>
+      txtLastname.addEventListener('input', function() {
+        localStorage.setItem('lastname', txtLastname.value);
+      }, false);
 
+      txtReserveemail.addEventListener('input', function() {
+        localStorage.setItem('reserveemail', txtReserveemail.value);
+      }, false);
+    }
+    </script>
+
+    <br />
+    <input type="submit" id="reserver" value="   RESERVE   "/>
+    <script>
+    document.getElementById("reserver").addEventListener("click", function(){
+      alert("Thank You! We Look Forward To Seeing You!!");
+    });
+    </script>
+
+  </form>
+</form>
+</div>
+</fieldset>
+</div>
+<div id="footer">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <!-- link to email form page here -->
+    <li><a href="contact.html">Contact</a></li>
+    <!-- link to resevation form page here -->
+    <li><a href="#">Reservations</a></li>
+  </ul>
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="styles/pnw.css" media="screen" title="PNW Taste" charset="utf-8">
 
   <style type="text/css">
-  fieldset{
+  fieldset, h3{
     width:auto;
     text-align: left;
     padding: 20px;
@@ -20,7 +20,16 @@
 
   }
 
-  #contactform{
+  h3{
+    text-decoration-line: underline;
+    font-size: 26px; color: white;
+    font-weight: normal; color: yellow;
+    text-align: left;
+    margin: auto;
+    padding: inherit;
+  }
+
+  #contactform {
     background-color: black;
     width: 80%;
   }
@@ -31,6 +40,7 @@
       margin: 0;
       padding: 0;
   }
+
   </style>
 
 </head>
@@ -59,39 +69,44 @@
   <!-- contact form starts here -->
   <div id="featured"> <h2>Contact Us</h2></div>
     <form action="action_page.php" method="post" target="_blank" accept-charset="UTF-8">
-      <div class="conatact">
+      <div class="contact">
         <form id="contact" action="apply.php">
-          <label for="email">Email</label>
-          <input type="text" id="email" name="email" /><br>
-          <label for="myName">Name</label>
-          <input type="text" id="myName" name="myName" /><br>
-          <label type="comments">Comments</label>
-          <textarea id="comments" name="commentbox" rows="8" cols="40">
-          </textarea>
-          <input type="submit"/>
+          <label for="email"><h3>Email</h3></label>
+          <input type="text" id="email" name="email" value="" /><br>
+          <label for="myname"><h3>Name</h3></label>
+          <input type="text" id="myname" name="myname" value="" /><br>
+          <label for="comments"><h3>Comments</h3></label>
+          <textarea id="comments" name="comments"></textarea>
+          <input type="submit"  />
         </form>
       </div>
-      <script src="main.js"></script>
-    <fieldset>
-      <legend>
-        <h3>Feedback:</h3>
-      </legend>
+      <script>
+      if (window.localStorage) {
+        var txtEmail = document.getElementById('email');//get form elements
+        var txtMyname = document.getElementById('myname');
+      var txtComments = document.getElementById('comments');
+      txtEmail.value = localStorage.getItem('email');
+        txtMyname.value = localStorage.getItem('myname');
+      txtComments.value = localStorage.getItem('comments');
 
-      <p>
-        <label for="comments">
-          Comments:
-        </label>
-        <br />
+      txtEmail.addEventListener('input', function() { //data saved
+          localStorage.setItem('email', txtEmail.value);
+        }, false);
 
-      </p>
-      <label>
-        <input type="checkbox" name="subscribe" checked="checked" />
-        <p>Sign me up for email updates</p>
-      </label>
+        txtMyname.addEventListener('input', function() {
+          localStorage.setItem('myname', txtMyname.value);
+        }, false);
+
+      txtComments.addEventListener('input', function() {
+          localStorage.setItem('comments', txtComments.value);
+        }, false);
+
+
+      }
+</script>
       <br />
-      <input type="submit" id="myBtn" value="   Submit feedback   "  onClick="function localStorage();"  />
-      <script src="main.js"></script>
-    </fieldset>
+
+
 </form>
 
   </form>
@@ -105,9 +120,10 @@
   </ul>
 </div>
   <script>
-  document.getElementById("myBtn").addEventListener("click", function(){
-    alert("Thank You For Your Feedback!!");
-  });
+  // document.getElementById("submit").addEventListener("click", function(){
+    // alert("Thank You For Your Feedback!!");
+  // });
+  </script>
 
 <script src="main.js"></script>
 </body>

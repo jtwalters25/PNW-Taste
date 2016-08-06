@@ -200,7 +200,7 @@ h3{
   text-shadow: 2px 2px black;
 }
 
-p {
+p, form{
   font-size: 22px; color: white;
   font-weight: normal; color: white;
   margin: 0;
