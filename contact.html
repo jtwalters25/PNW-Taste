@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>contact form</title>
   <link rel="stylesheet" href="styles/pnw.css" media="screen" title="PNW Taste" charset="utf-8">
-
+<!-- contact page styling -->
   <style type="text/css">
   fieldset, h3{
     width:auto;
@@ -46,6 +46,7 @@
 </head>
 <body>
   <h1>Pacific NorthWest Taste</h1>
+  <!-- navigation -->
   <div id="nav">
     <div id="nav_wrapper">
       <ul>
@@ -77,9 +78,10 @@
         <input type="text" id="myname" name="myname" value="" /><br>
         <label for="comments"><h3>Comments</h3></label>
         <textarea id="comments" name="comments"></textarea>
-        <input type="submit"  />
+      
       </form>
     </div>
+    <!-- javascript starts -->
     <script>
     if (window.localStorage) {
       var txtEmail = document.getElementById('email');//get form elements
@@ -100,27 +102,27 @@
       txtComments.addEventListener('input', function() {
         localStorage.setItem('comments', txtComments.value);
       }, false);
-        
+
     }
     </script>
-    <br />
-  </form>
 
-</form>
+    <br />
+    <input type="submit" id="submit" value="   SUBMIT   "/>
+    <script>
+     document.getElementById("submit").addEventListener("click", function(){
+     alert("Thank You For Your Feedback!!");
+    });
+    </script>
+  </form>
 </div>
+<!-- footer -->
 <div id="footer">
   <ul>
-    <!-- link to email form page here -->
     <li><a href="#">Contact</a></li>
     <li><a href="reservations.html">Reservations</a></li>
     <li><a href="index.html">Home</a></li>
   </ul>
 </div>
-<script>
-// document.getElementById("submit").addEventListener("click", function(){
-// alert("Thank You For Your Feedback!!");
-// });
-</script>
 
 <script src="main.js"></script>
 </body>

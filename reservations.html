@@ -75,7 +75,7 @@
     </div>
     <!-- nav wrapper end -->
   </div>
-  <!-- contact form starts here -->
+  <!-- reservation form starts here -->
   <div id="featured"> <h2>Reservations</h2></div>
   <form action="action_page.php" method="post" target="_blank" accept-charset="UTF-8">
     <div class="reservations">
@@ -86,17 +86,24 @@
         <input type="text" id="lastname" name="lastname" value="" /><br>
         <label for="reserveemail"><h3>E mail:</h3></label>
         <input type="text" id="reserveemail" name="reserveemail" value="" /><br>
+        <label for="restime"><h3>Reservation Time</h3></label>
+        <input type="time" id="restime" name="name" value="" /><br>
+      
       </form>
     </div>
     <script>
     if (window.localStorage) {
-    var txtFirstname = document.getElementById('firstname');
+      var txtFirstname = document.getElementById('firstname');
       var txtLastname = document.getElementById('lastname');
       var txtReserveemail = document.getElementById('reserveemail');
-    txtFirstname.value = localStorage.getItem('firstname');
+      var timeRestime = document.getElementById('restime');
+
+      txtFirstname.value = localStorage.getItem('firstname');
       txtLastname.value = localStorage.getItem('lastname');
       txtReserveemail.value = localStorage.getItem('reserveemail');
-    txtFirstname.addEventListener('input', function() {
+      timeRestime.value = localStorage.getItem('restime');
+
+      txtFirstname.addEventListener('input', function() {
         localStorage.setItem('firstname', txtFirstname.value);
       }, false);
 
@@ -106,6 +113,10 @@
 
       txtReserveemail.addEventListener('input', function() {
         localStorage.setItem('reserveemail', txtReserveemail.value);
+      }, false);
+
+      timeRestime.addEventListener('input', function() {
+        localStorage.setItem('restime', timeRestime.value);
       }, false);
     }
     </script>
