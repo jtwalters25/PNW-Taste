@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>reservation form</title>
-  <link rel="stylesheet" href="styles/pnw.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="../styles/pnw.css" media="screen" title="no title" charset="utf-8">
 
   <style type="text/css">
   fieldset{
@@ -77,9 +77,8 @@
   </div>
   <!-- reservation form starts here -->
   <div id="featured"> <h2>Reservations</h2></div>
-  <form action="action_page.php" method="post" target="_blank" accept-charset="UTF-8">
+  <form id="reservations" method="post" accept-charset="UTF-8">
     <div class="reservations">
-      <form id="reservations" action="apply.php">
         <label for="firstname"><h3>First Name:</h3></label>
         <input type="text" id="firstname" name="firstname" value="" /><br>
         <label for="lastname"><h3>Last Name:</h3></label>
@@ -87,47 +86,12 @@
         <label for="reserveemail"><h3>E mail:</h3></label>
         <input type="text" id="reserveemail" name="reserveemail" value="" /><br>
         <label for="restime"><h3>Reservation Time</h3></label>
-        <input type="time" id="restime" name="name" value="" /><br>
-      </form>
+        <input type="time" id="restime" name="q" placeholder="What Time" value="" /><br>
     </div>
-    <script>
-    if (window.localStorage) {
-      var txtFirstname = document.getElementById('firstname');
-      var txtLastname = document.getElementById('lastname');
-      var txtReserveemail = document.getElementById('reserveemail');
-      var timeRestime = document.getElementById('restime');
-
-      txtFirstname.value = localStorage.getItem('firstname');
-      txtLastname.value = localStorage.getItem('lastname');
-      txtReserveemail.value = localStorage.getItem('reserveemail');
-      timeRestime.value = localStorage.getItem('restime');
-
-      txtFirstname.addEventListener('input', function() {
-        localStorage.setItem('firstname', txtFirstname.value);
-      }, false);
-
-      txtLastname.addEventListener('input', function() {
-        localStorage.setItem('lastname', txtLastname.value);
-      }, false);
-
-      txtReserveemail.addEventListener('input', function() {
-        localStorage.setItem('reserveemail', txtReserveemail.value);
-      }, false);
-
-      timeRestime.addEventListener('input', function() {
-        localStorage.setItem('restime', timeRestime.value);
-      }, false);
-    }
-    </script>
 
     <br />
     <input type="submit" id="reserver" value="   RESERVE   "/>
-    <script>
-    document.getElementById("reserver").addEventListener("click", function(){
-      alert("Thank You! We Look Forward To Seeing You!!");
-    });
-    </script>
-
+    <input type="button" onclick="clearStorage()" value="Start Over"/>
   </form>
 </form>
 </div>
@@ -143,6 +107,6 @@
   </ul>
 </div>
 
-<script src="main.js"></script>
+<script src="../js/reservations.js"></script>
 </body>
 </html>

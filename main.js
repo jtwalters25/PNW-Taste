@@ -36,6 +36,5 @@ if (window.localStorage) {
 
   txtComments.addEventListener('input', function() {
     localStorage.setItem('comments', txtComments.value);
-
   }, false);
 }
