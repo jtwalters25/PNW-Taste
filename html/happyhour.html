@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Happy Hour</title>
   <meta name="Description" content="Pacific Northwest Taste">
-  <link rel="stylesheet" href="styles/main.css" title="happyhour" charset="utf-8">
+  <link rel="stylesheet" href="../styles/main.css" title="happyhour" charset="utf-8">
 
   <style type="text/css">
 
@@ -54,11 +54,14 @@
 <button onclick="myFunction()"> <h3>FIND OUT TODAY'S HAPPY HOUR DRINK SPECIAL</h3> </button>
 
  <h3 id="drinkSpecial"></h3>
+
+ <script src="../js/models/special.js"></script>
+
 <script>
 function myFunction() {
     var d = new Date();
     var weekday = new Array(7);
-    weekday[0] = "Today is Cosmo Sunday";
+    weekday[0] = new Special("Cosmo Sunday", 9.99);
     weekday[1] = "Today is Moscow Mule Monday";
     weekday[2] = "Today is Martini Tuesday ";
     weekday[3] = "Today is Manhattan Wednesday";
@@ -67,7 +70,7 @@ function myFunction() {
     weekday[6] = "Today is Old Fashion Saturday";
 
     var n = weekday[d.getDay()];
-    document.getElementById("drinkSpecial").innerHTML = n;
+    document.getElementById("drinkSpecial").innerHTML = n.getMessage();
 }
 
 </script>
