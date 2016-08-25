@@ -1,3 +1,4 @@
+/**constuctors for specials*/
 var Special = function(title, price, recipe) {
   this.title = title,
   this.price = price,
