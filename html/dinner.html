@@ -4,7 +4,20 @@
   <meta charset="utf-8">
   <title>Dinner</title>
   <meta name="Description" content="Pacific Northwest Taste">
-  <link rel="stylesheet" href="styles/main.css" title="pnwcss" charset="utf-8">
+  <link rel="stylesheet" href="../styles/main.css" title="pnwcss" charset="utf-8">
+    <style type="text/css">
+
+    h3{
+      text-align: center;
+      font-style: normal;color: white;
+      font-size: 40px;
+    }
+    button{
+      background-color: red;
+      margin: 20px;
+    }
+
+    </style>
 </head>
 <body>
   <div id="header">
@@ -32,18 +45,26 @@
   <!-- nav wrapper end -->
 </div>
 <div id="featured"> <h2>Dinner</h2>
-<div class="feature"><h2>BERING SEA SABLEFISH*<h2>
-  <h3>honey-miso marinade, namya broth, Dungeness crab dumplings
-    39</h3>
+  <div class="feature"><h2>BERING SEA SABLEFISH*<h2>
+    <h3>honey-miso marinade, namya broth, Dungeness crab dumplings
+      39</h3>
+    </div>
   </div>
-</div>
-<div id="footer">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="reservations.html">Reservations</a></li>
-    <!-- link to email form page here -->
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</div>
-<script src="main.js"></script>
+  <button onclick="myFunction()"> <h3>CLICK TO FIND OUT TODAY'S DINNER SPECIAL IS!</h3> </button>
+
+  <h3 id="Special"></h3>
+
+  <script src="../js/models/special.js"></script>
+  <script src="../js/dinnerspecials.js"></script>
+
+  </script>
+  <div id="footer">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+      <!-- link to email form page here -->
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <!-- <script src="main.js"></script> -->
 </body>

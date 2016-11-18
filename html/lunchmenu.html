@@ -4,7 +4,20 @@
   <meta charset="utf-8">
   <title>PNW Taste</title>
   <meta name="Description" content="Pacific Northwest Taste">
-  <link rel="stylesheet" href="styles/main.css" title="pnwcss" charset="utf-8">
+  <link rel="stylesheet" href="../styles/main.css" title="pnwcss" charset="utf-8">
+  <style type="text/css">
+
+  h3{
+    text-align: center;
+    font-style: normal;color: white;
+    font-size: 40px;
+  }
+  button{
+    background-color: red;
+    margin: 20px;
+  }
+
+  </style>
 </head>
 <body>
   <div id="header">
@@ -36,6 +49,15 @@
   <p>Enjoy a delicious light seafood salad for lunch today $12</p>
   </div>
 </div>
+<!--  lunch specials are discovered here-->
+<button onclick="myFunction()"> <h3>CLICK TO FIND OUT TODAY'S LUNCH SPECIAL IS!</h3> </button>
+
+ <h3 id="Special"></h3>
+
+ <script src="../js/models/special.js"></script>
+ <script src="../js/lunchspecials.js"></script>
+
+ </script>
 <div id="footer">
   <ul>
     <li><a href="index.html">Home</a></li>
@@ -44,5 +66,5 @@
     <li><a href="reservations.html">Reservations</a></li>
   </ul>
 </div>
-<script src="main.js"></script>
+<script src="../js/models/special.js"></script>
 </body>
