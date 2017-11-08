@@ -1,3 +1,4 @@
 # PNW-Taste
 
 
+Vanilla JavaScript
